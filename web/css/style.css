@@ -1,0 +1,518 @@
+#header{
+    padding-bottom: 10px;
+    min-height: 161px;
+    font-size: 30px;
+}
+#valikko-nappulan-divi{
+    background-color: #179BDB;
+    padding: 5px;
+    font-size: 25px;
+    min-height: 55px;
+    color: #ffffff;
+    text-align: center;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#207cca+-2,7db9e8+0,207cca+0,2989d8+27,2989d8+47,1e5799+100 */
+    background: #207cca; /* Old browsers */
+    background: -moz-linear-gradient(top,  #207cca -2%, #7db9e8 0%, #207cca 0%, #2989d8 27%, #2989d8 47%, #1e5799 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #207cca -2%,#7db9e8 0%,#207cca 0%,#2989d8 27%,#2989d8 47%,#1e5799 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #207cca -2%,#7db9e8 0%,#207cca 0%,#2989d8 27%,#2989d8 47%,#1e5799 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+
+}
+.valikko-nappi {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  position: absolute;
+  left: 5px;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 10px;
+  background: #179BDB;
+  padding: 10px 10px 10px 10px;
+  border: solid #ffffff 1px;
+  text-decoration: none;
+}
+.valikko-nappi:hover {
+  background: #54b7e7;
+  text-decoration: none;
+}
+
+/*----------tässä tilojen selauksessa näkyvän pikku divin jutskat-------------*/
+.pikkutiladivi{
+    float: left;
+    min-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pikkutiladivi > img{
+    float: left;
+    width: 225px;
+    height: 150px;
+    margin-right: 10px
+}
+.kts_tarkemmin{
+    margin-top: -10px;
+    float:left;
+    width:100%;
+}
+.otsikko{
+    float:left;
+    margin-top: 10px;
+    width:100%;
+}
+.otsikko > h4{
+    display: inline;
+    margin-bottom: 10px;
+    margin-right: 10px
+}
+.otsikko > h5{
+    display: inline;
+    color:green;
+    margin-bottom: 10px;
+}
+.otsikko > p{
+    width: 100%;
+    margin-top: 10px;
+}
+@media(min-width:768px) {/*<--- tämä toteutuu sillon kun näyttö on minimissään 768px leveä*/
+    .pikkutiladivi > p{
+        margin-top: 5px;
+        width:80%;
+    }
+}
+
+.tilan-valitsemis-linkki{
+  float: left;
+  margin-top: 10px;
+  background: #179BDB;
+  background-image: -webkit-linear-gradient(top, #179BDB, #2980b9);
+  background-image: -moz-linear-gradient(top, #179BDB, #2980b9);
+  background-image: -ms-linear-gradient(top, #179BDB, #2980b9);
+  background-image: -o-linear-gradient(top, #179BDB, #2980b9);
+  background-image: linear-gradient(to bottom, #179BDB, #2980b9);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.tilan-valitsemis-linkki:hover {
+  background: #3cb0fd;
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+/*----------------------------------------------------------------------------*/
+/*-----------------------Tilan tiedot sivu------------------------------------*/
+.tilantietodivi {
+    border: none;
+}
+.tilantietodivi > p {
+    margin-top: 15px;
+}
+
+.pikkukuvat{
+    margin-left: 0px;
+}
+.pikkukuva{
+    border:none;
+    max-width: 120px;
+    margin-top: 5px;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*-----------------------Kalenterin tyylit------------------------------------*/
+#kalenteri,#yllapitokalenteri{
+    width:300px;
+    height:0px;
+    visibility: hidden;
+}
+#kalenterindiv{
+    float:left;
+    width:300px;
+    height:350px;
+}
+
+
+/*----------------------------------------------------------------------------*/
+#tuntienvalinta{
+    float:left;
+    margin-left: 30px;
+    margin-top: 5px;
+    width:180px;
+    height:510px;
+    cursor: pointer;
+}
+.tuntilaatikko{
+    font-weight: bold;
+    text-align: center;
+    width: 180px;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+.vapaa{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+4,52b152+21,008a00+51,005700+100,002400+100,005700+100 */
+    background: #b4ddb4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b4ddb4 0%, #83c783 4%, #52b152 21%, #008a00 51%, #005700 100%, #002400 100%, #005700 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #b4ddb4 0%,#83c783 4%,#52b152 21%,#008a00 51%,#005700 100%,#002400 100%,#005700 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #b4ddb4 0%,#83c783 4%,#52b152 21%,#008a00 51%,#005700 100%,#002400 100%,#005700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#005700',GradientType=0 ); /* IE6-9 */
+}
+.varattu{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+19,cf0404+80,cf0404+100 */
+background: #ff3019; /* Old browsers */
+background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 19%, #cf0404 80%, #cf0404 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 19%,#cf0404 80%,#cf0404 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 19%,#cf0404 80%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+
+}
+.ui-selected{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e6f0a3+0,d2e638+50,c3d825+53,dbf043+100 */
+    background: #e6f0a3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e6f0a3 0%, #d2e638 50%, #c3d825 53%, #dbf043 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 53%,#dbf043 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #e6f0a3 0%,#d2e638 50%,#c3d825 53%,#dbf043 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+    color: black;
+}
+
+#lisapalvelut{
+    float:left;
+    margin-left: 30px;
+    margin-top: 5px;
+    width:215px;
+    height:380px;
+}
+#lisapalvelut > label{
+    text-decoration: none;
+    font-weight: normal;
+    margin-left: 3px;
+}
+#hklmaara{
+    width:50px;
+}
+#tilauksentiedot{
+    float:left;
+    margin-left: 30px;
+    margin-top: 5px;
+    width:400px;
+    height:450px;
+}
+
+#valitut_tunnit{
+    width:50px;
+    height:0px;
+    visibility: hidden;
+}
+#varauksen_hinta{
+    width:50px;
+    height:0px;
+    visibility: hidden;
+}
+
+#varausnappula{
+    -moz-box-shadow:inset 0px 1px 0px 0px #74c42d;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #74c42d;
+    box-shadow:inset 0px 1px 0px 0px #74c42d;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+4,52b152+21,008a00+51,005700+100,002400+100,005700+100 */
+    background: #b4ddb4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b4ddb4 0%, #83c783 4%, #52b152 21%, #008a00 51%, #005700 100%, #002400 100%, #005700 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #b4ddb4 0%,#83c783 4%,#52b152 21%,#008a00 51%,#005700 100%,#002400 100%,#005700 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #b4ddb4 0%,#83c783 4%,#52b152 21%,#008a00 51%,#005700 100%,#002400 100%,#005700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#005700',GradientType=0 ); /* IE6-9 */
+    background-color:#5d7818;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #b4ddb4;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:25px;
+    font-weight:bold;
+    padding:20px 35px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #567a1b;
+}
+#varausnappula:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005700+0,002400+0,005700+0,008a00+49,52b152+93,52b152+94,83c783+98,b4ddb4+100 */
+    background: #005700; /* Old browsers */
+    background: -moz-linear-gradient(top,  #005700 0%, #002400 0%, #005700 0%, #008a00 49%, #52b152 93%, #52b152 94%, #83c783 98%, #b4ddb4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #005700 0%,#002400 0%,#005700 0%,#008a00 49%,#52b152 93%,#52b152 94%,#83c783 98%,#b4ddb4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #005700 0%,#002400 0%,#005700 0%,#008a00 49%,#52b152 93%,#52b152 94%,#83c783 98%,#b4ddb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005700', endColorstr='#b4ddb4',GradientType=0 ); /* IE6-9 */
+
+}
+#varausnappula:active {
+    position:relative;
+    top:1px;
+}
+#varausnappula:disabled{
+    -moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+    box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+59,52b152+100,008a00+100,005700+100,002400+100,005700+100,008a00+100 */
+    background: rgb(180,221,180); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(180,221,180,1) 0%, rgba(131,199,131,1) 59%, rgba(82,177,82,1) 100%, rgba(0,138,0,1) 100%, rgba(0,87,0,1) 100%, rgba(0,36,0,1) 100%, rgba(0,87,0,1) 100%, rgba(0,138,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(180,221,180,1) 0%,rgba(131,199,131,1) 59%,rgba(82,177,82,1) 100%,rgba(0,138,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,36,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,138,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(180,221,180,1) 0%,rgba(131,199,131,1) 59%,rgba(82,177,82,1) 100%,rgba(0,138,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,36,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,138,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#008a00',GradientType=0 ); /* IE6-9 */
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #b4ddb4;
+    display:inline-block;
+
+    color:#ffffff;
+    font-family:Arial;
+    font-size:25px;
+    font-weight:bold;
+    padding:20px 35px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #86ae47;
+}
+
+.jatkanappula{
+    -moz-box-shadow:inset 0px 1px 0px 0px #74c42d;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #74c42d;
+    box-shadow:inset 0px 1px 0px 0px #74c42d;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+4,52b152+21,008a00+51,005700+100,002400+100,005700+100 */
+    background: #b4ddb4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b4ddb4 0%, #83c783 4%, #52b152 21%, #008a00 51%, #005700 100%, #002400 100%, #005700 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #b4ddb4 0%,#83c783 4%,#52b152 21%,#008a00 51%,#005700 100%,#002400 100%,#005700 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #b4ddb4 0%,#83c783 4%,#52b152 21%,#008a00 51%,#005700 100%,#002400 100%,#005700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#005700',GradientType=0 ); /* IE6-9 */
+    background-color:#5d7818;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #b4ddb4;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 25px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #567a1b;
+}
+.jatkanappula:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005700+0,002400+0,005700+0,008a00+49,52b152+93,52b152+94,83c783+98,b4ddb4+100 */
+    background: #005700; /* Old browsers */
+    background: -moz-linear-gradient(top,  #005700 0%, #002400 0%, #005700 0%, #008a00 49%, #52b152 93%, #52b152 94%, #83c783 98%, #b4ddb4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #005700 0%,#002400 0%,#005700 0%,#008a00 49%,#52b152 93%,#52b152 94%,#83c783 98%,#b4ddb4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #005700 0%,#002400 0%,#005700 0%,#008a00 49%,#52b152 93%,#52b152 94%,#83c783 98%,#b4ddb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005700', endColorstr='#b4ddb4',GradientType=0 ); /* IE6-9 */
+
+}
+.jatkanappula:active {
+    position:relative;
+    top:1px;
+}
+.jatkanappula:disabled{
+    -moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+    box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+59,52b152+100,008a00+100,005700+100,002400+100,005700+100,008a00+100 */
+    background: rgb(180,221,180); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(180,221,180,1) 0%, rgba(131,199,131,1) 59%, rgba(82,177,82,1) 100%, rgba(0,138,0,1) 100%, rgba(0,87,0,1) 100%, rgba(0,36,0,1) 100%, rgba(0,87,0,1) 100%, rgba(0,138,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(180,221,180,1) 0%,rgba(131,199,131,1) 59%,rgba(82,177,82,1) 100%,rgba(0,138,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,36,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,138,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(180,221,180,1) 0%,rgba(131,199,131,1) 59%,rgba(82,177,82,1) 100%,rgba(0,138,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,36,0,1) 100%,rgba(0,87,0,1) 100%,rgba(0,138,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#008a00',GradientType=0 ); /* IE6-9 */
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #b4ddb4;
+    display:inline-block;
+
+    color:#ffffff;
+    font-family:Arial;
+    font-size:25px;
+    font-weight:bold;
+    padding:20px 35px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #86ae47;
+}
+
+.perunappula{
+    -moz-box-shadow:inset 0px 1px 0px 0px #ff3019;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ff3019;
+    box-shadow:inset 0px 1px 0px 0px #ff3019;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+28,ff3019+28,cf0404+64 */
+    background: #ff3019; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff3019 28%, #ff3019 28%, #cf0404 64%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ff3019 28%,#ff3019 28%,#cf0404 64%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ff3019 28%,#ff3019 28%,#cf0404 64%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+    background-color:#d0451b;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #ff3019;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 25px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #567a1b;
+    
+}
+.perunappula:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005700+0,002400+0,005700+0,008a00+49,52b152+93,52b152+94,83c783+98,b4ddb4+100 */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+
+}
+.perunappula:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+.piilotetut_inputit{
+    height: 0px;
+    width: 20px;
+    visibility: hidden;
+}
+
+.varauksentiedotdivi{
+    float: left;
+    width:400px;
+    margin-left: 15px;
+    border:none;
+}
+.varauksentiedotdivi > img{
+    float:right;
+}
+
+#tilauslomake > label > p{
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.error{
+    color:red;
+}
+
+/*------------------------------haku-------------------------------------------*/
+#haku_slider{
+    float:left;
+    width:250px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+#haku_slider_divi{
+    float:left;
+    width:100%;
+}
+#haku_divi{
+    float:left;
+}
+#haku_divi > form > p{
+    float:left;
+    padding-right: 13px;
+    margin: 0;
+    display: inline;
+}
+#haku_hklmaara{
+    float:left;
+    width: 50px;
+    margin-top: -3px;
+}
+#haku_chekboxit_divi{
+    margin-top: 10px;
+    float:left;
+    width:100%;
+}
+#haku_vasemmat{
+    width:180px;
+    float:left;
+}
+#haku_oikeat{
+    width:280px;
+    float:left;
+}
+#haku_vasemmat > label, #haku_oikeat > label{
+    margin-left: 5px;
+}
+#haku_nappi{
+    margin-top: 15px;
+}
+.hakuKone{
+    margin-left: 0px;
+    margin-right: 0px;
+    border:none;
+}
+#hakunamatata{
+    margin-top: 10px;
+}
+#hakupalkki_nappi{
+    background-color: white;
+    border:none;
+    color:gray;
+}
+#haku_kokonaan{
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+.kiitosdivi{
+    border: none;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+#back-to-top:hover {
+    background: #e9ebec;
+}
+#back-to-top.show {
+    opacity: 1;
+}
+#content {
+    height: 2000px;
+}
+
+#varauksen_muokkaus{
+    margin-left: 30px;
+}
